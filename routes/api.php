@@ -71,6 +71,7 @@ Route::get('cv/{id}',[CvController::class,'show']);
 
 // Searching for data
 Route::get('/cv/search/{nv}',[CvController::class,'search']);
+Route::get('emploi/{id}',[EmploiController::class,'show']);
 
 
 
@@ -188,7 +189,6 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('candidat/{id}',[CandidatController::class,'show']);
     Route::get('cv/{id}',[CvController::class,'show']);
 
-    Route::get('emploi/{id}',[EmploiController::class,'show']);
     Route::get('emploi_type/{id}',[EmploiTypeController::class,'show']);
     Route::get('secteur_activite/{id}',[SecteurActiviteController::class,'show']);
 

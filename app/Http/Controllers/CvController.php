@@ -15,7 +15,7 @@ class CvController extends Controller
      */
     public function index()
     {
-        return Cv::with('competences','domaines','experiences','profile.languages')->get();
+        return Cv::with('competences','domaines','experiences','profile.langues')->get();
     }
 
     /**
@@ -41,7 +41,7 @@ class CvController extends Controller
      */
     public function show($id)
     {
-        return Cv::with('competences','domaines','experiences','profile.languages')->find($id);
+        return Cv::with('competences','domaines','experiences','profile.langues')->find($id);
     }
 
     /**
